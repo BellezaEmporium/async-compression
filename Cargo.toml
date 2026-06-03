@@ -1,8 +1,8 @@
 [package]
 name = "async-compression"
-version = "0.4.5"
+version = "0.4.6"
 authors = ["Wim Looman <wim@nemo157.com>", "Allen Bui <fairingrey@gmail.com>"]
-edition = "2018"
+edition = "2024"
 license = "MIT OR Apache-2.0"
 keywords = ["compression", "gzip", "zstd", "brotli", "async"]
 categories = ["compression", "asynchronous"]
@@ -32,29 +32,29 @@ zstdmt = ["zstd", "zstd-safe/zstdmt"]
 deflate64 = ["dep:deflate64"]
 
 [dependencies]
-brotli = { version = "3.3", optional = true, default-features = false, features = ["std"] }
-bzip2 = { version = "0.4.4", optional = true }
-flate2 = { version = "1.0.13", optional = true }
-futures-core = { version = "0.3", default-features = false }
-futures-io = { version = "0.3", default-features = false, features = ["std"], optional = true }
-libzstd = { package = "zstd", version = "0.13", optional = true, default-features = false }
-memchr = "2"
-pin-project-lite = "0.2"
-tokio = { version = "1.24.2", optional = true, default-features = false }
-xz2 = { version = "0.1.6", optional = true }
-zstd-safe = { version = "7", optional = true, default-features = false }
-deflate64 = { version = "0.1.5", optional = true }
+brotli = { version = "8.0.3", optional = true, default-features = false, features = ["std"] }
+bzip2 = { version = "0.6.1", optional = true }
+flate2 = { version = "1.1.9", optional = true }
+futures-core = { version = "0.3.32", default-features = false }
+futures-io = { version = "0.3.32", default-features = false, features = ["std"], optional = true }
+libzstd = { package = "zstd", version = "0.13.3", optional = true, default-features = false }
+memchr = "2.8.1"
+pin-project-lite = "0.2.17"
+tokio = { version = "1.52.3", optional = true, default-features = false }
+xz2 = { version = "0.1.7", optional = true }
+zstd-safe = { version = "7.2.4", optional = true, default-features = false }
+deflate64 = { version = "0.1.12", optional = true }
 
 [dev-dependencies]
-bytes = "1"
-futures = "0.3.5"
-futures-test = "0.3.5"
+bytes = "1.11.1"
+futures = "0.3.32"
+futures-test = "0.3.32"
 ntest = "0.9"
 proptest = "1"
-proptest-derive = "0.4"
-rand = "0.8.5"
-tokio = { version = "1.24.2", default-features = false, features = ["io-util", "macros", "rt-multi-thread", "io-std"] }
-tokio-util = { version = "0.7", default-features = false, features = ["io"] }
+proptest-derive = "0.8.0"
+rand = "0.10.1"
+tokio = { version = "1.52.3", default-features = false, features = ["io-util", "macros", "rt-multi-thread", "io-std"] }
+tokio-util = { version = "0.7.18", default-features = false, features = ["io"] }
 
 [[test]]
 name = "brotli"
